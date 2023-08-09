@@ -1,0 +1,250 @@
+  :root{
+    --main-color: #0057b7;
+    --secondary-color: #ffd700;
+    --bg-color: #171717;
+    --nav-bg: #14316e;
+    --nav-color: #ffffff;
+    --navbar-background-color: rgba(229,235,244,.8);
+    --navbar-background-color-no-blur: rgba(229,235,244,.95);
+    --navbar-menu-background-color: #ebeff4;
+    --navbar-button-color-primary: #f06414;
+    --navbar-button-color-primary-hover: #f1742b;
+    --navbar-button-color-secondary: #05a0fa;
+    --navbar-button-color-secondary-hover: #1ea9fb;
+    --navbar-content-color-primary: #000;
+    --important-mes-background: linear-gradient(90deg, #0057b7, #ffd700 );
+  }
+
+  :host([theme="light"]) {
+    --navbar-content-color-primary: var(--color-darken-900);
+    --navbar-content-color-secondary: var(--color-darken-600);
+    --navbar-content-color-tertiary: var(--color-darken-500);
+    --navbar-background-color: rgba(229,235,244,.8);
+    --navbar-background-color-no-blur: rgba(229,235,244,.95);
+    --navbar-menu-background-color: #efefef;
+    --navbar-menu-background-color-alt: var(--color-darken-100);
+    --navbar-hover-background-color: var(--color-darken-100);
+    --navbar-hover-background-color-alt: var(--color-darken-300);
+    --navbar-blizzard-logo-background-color: var(--color-content-700);
+    --navbar-badge-text-color: var(--color-content-900);
+    --navbar-battletag-text-color: var(--color-primary-500);
+    --navbar-search-background-color: var(--color-content-900);
+  }
+
+
+  img, svg {
+    height: 100%;
+    width: 100%;
+  }
+  *{
+    transition: all 0.5s ease;
+    margin: 0;
+    padding: 0;
+    color: inherit;
+    /* color: red !important  ; */
+    font-family: sans-serif;
+    border: #ffffff 1px solid !important;
+  }
+
+  body {
+    background-color:var(--bg-color);
+    color: #ffffff;
+  }
+
+  a{
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+  }
+
+  header{
+    box-sizing: border-box;
+    display: block;
+    max-width: 2600px;
+    position: sticky;
+    top: 0px;
+    width: 100%;
+    z-index: 99;
+  }
+
+
+  .nav {
+    display: flex;
+    flex-direction: row;
+    background-color: var(--navbar-background-color);
+    position: absolute;
+    border-radius: 8px;
+    height: 72px;
+    color: var(--navbar-content-color-primary);
+    align-items: center;
+    left: 16px;
+    font-weight: 600;
+    top: 16px;
+    right: 16px;
+    flex-wrap: nowrap;
+    align-content: space-between;
+    justify-content: space-around;
+  }
+
+  .nav__list {
+    display: flex;
+    flex: 1 1 auto;
+    flex-direction: row;
+    align-content: center;
+    align-items: center;
+    justify-content: flex-start;
+    list-style: none;
+    order: 0;
+  }
+
+  .nav__list--primary .nav__list__item .nav__list__item__link {
+    padding: 0 16px;
+    line-height: 1.2;
+    min-height: 48px;
+    display: flex;
+    align-items: center;
+    border-radius: 8px;
+  }
+
+  .nav__list__item__link:hover{
+    background-color: red;
+  }
+
+  .nav__logo {
+    padding-left: 32px;
+    padding-right: 16px;
+    font-weight: 900;
+    font-size: 25px;
+  }
+
+  .nav__logo__img {
+  }
+
+  .footer{
+    background-color: #171717;
+    color: white;
+    text-align: center;
+  }
+
+  .nav__list__item__btn {
+    background: var(--nav-btn-bg);
+    padding: 12px;
+    /* margin: 5px; */
+    width: 24px;
+    height: 24px;
+    border-radius: 8px;
+    text-align: center;
+    color: var(--nav-btn-color);
+  }
+
+  .nav__list__item__btn > *{
+    fill: var(--nav-btn-color);
+  }
+
+  .footer__copyright{}
+
+  .footer__copyright--disclaimer{}
+  .footer__copyright--trademarks{}
+  .nav__list--primary{
+    font-size: 18px;
+  }
+  .nav__list--secondary .nav__list__item{
+    font-size: 16px;
+    padding: 0 8px;
+  }
+
+  .nav__list--secondary .nav__list__item:has(.nav__list__item__btn),
+  .nav__list--secondary .nav_btn{
+    margin: 0 2px !important;
+    padding: 0;
+  }
+  .section{
+    min-height: 25vh;
+  }
+  .section--main{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-size: 30px;
+  }
+
+  .footer__copyright--important-mes{
+    background: var(--important-mes-background);
+  }
+  .nav__list__item__btn--github{}
+  .section{}
+  .section--about{}
+  .section--blog{}
+  .section--main{}
+  .section--pref1{}
+  .section--projects{}
+
+  .section__pref__elem{
+    display: flex;
+    width: 100%;
+    max-width: 768px;
+    padding: 0 50px;
+    box-sizing: border-box;
+    margin: 20px auto;
+  }
+  .section__pref__elem__icon{
+    width: 20vw;
+    max-width: 200px;
+  }
+
+  .section__pref__elem__desc{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+  }
+
+  .section__pref__elem__title{
+    color: #fff;
+    font-size: 32px;
+    font-size: 2rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin: 0;
+    margin-bottom: 15px;
+  }
+
+  .section__pref__elem__link{
+    color: #fff;
+    font-family: 'Roboto', sans-serif;
+    font-size: 24px;
+    font-size: 1.5rem;
+    font-weight: 400;
+    text-decoration: none;
+    position: relative;
+  }
+
+  .section__pref__list{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: flex-start;
+    max-width: 968px;
+    width: 100%;
+    margin: 10px auto;
+    margin-top: 40px;
+  }
+
+  .section__pref__list__elem{
+    width: calc(100% / 3);
+    padding: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+  }
+
+  .section__pref__list__elem > svg{
+    width: 20vw;
+    max-width: 200px;
+    height: 20vw;
+    max-height: 200px;
+  }

@@ -7,6 +7,12 @@
     <link rel="stylesheet" href="/main.style.css" />
   </head>
   <body>
+    <div class="section__backround">
+      <picture part="picture">
+        <source srcset="https://blz-contentstack-images.akamaized.net/v3/assets/blta8f9a8e092360c6c/blt0bc84c06e0101858/61e765a95ea4533b71dccdaf/1600_Featured_Games.jpg?format=webply&amp;quality=80&amp;auto=webp" type="image/webp">
+        <img part="image" src="https://blz-contentstack-images.akamaized.net/v3/assets/blta8f9a8e092360c6c/blt0bc84c06e0101858/61e765a95ea4533b71dccdaf/1600_Featured_Games.jpg?format=webply&amp;quality=80&amp;auto=webp" alt="" loading="lazy">
+      </picture>
+    </div>
     <header>
     <nav class="nav" id="header">
       <a class="nav__logo" href="/">
@@ -16,9 +22,6 @@
 
       <ul class="nav__list nav__list--primary">
         <li class="nav__list__item">
-          <a href="/about" class="nav__list__item__link">About me</a>
-        </li>
-        <li class="nav__list__item">
           <a href="/portfolio" class="nav__list__item__link">Portfolio</a>
         </li>
         <li class="nav__list__item">
@@ -27,25 +30,25 @@
         <li class="nav__list__item">
           <a href="/goodies" class="nav__list__item__link">Goodies</a>
         </li>
-        <li class="nav__list__item">
-          <a href="/support" class="nav__list__item__link">Support me</a>
-        </li>
       </ul>
 
       <ul class="nav__list nav__list--secondary">
-        <li class="nav__list__item">
+        <!-- <li class="nav__list__item">
           <a class="nav__list__item__link">UA</a>          
+        </li> -->
+        <li class="nav__list__item">
+          <a href="/about" class="nav__list__item__link">About me</a>
         </li>
         <li class="nav__list__item">
-          <a href="/goodies" class="nav__list__item__link">Diary</a>
+          <a href="/support" class="nav__list__item__link">Support me</a>
         </li>
         <li class="nav__list__item nav_btn">
           <a class="nav__list__item__btn nav__list__item__btn--github"
-            style="--nav-btn-bg: #000000;--nav-btn-color:#ffffff">G</a>
+            style="--nav-btn-bg: #000000;--nav-btn-color:#ffffff">GH</a>
         </li>
         <li class="nav__list__item nav_btn">
           <a class="nav__list__item__btn nav__list__item__btn--github"
-            style="--nav-btn-bg: #000000;--nav-btn-color:#ffffff">BuyMeCoffee</a>
+            style="--nav-btn-bg: #e55200;--nav-btn-color:#ffffff">GL</a>
         </li>
       </ul>
     </nav>
@@ -107,12 +110,21 @@
     </section>
 
     <section class="section section--blog">
-      <h1>last news</h1>
+      
+      
+      <h1>last posts</h1>
     </section>
 
+
     <footer id="footer" class="footer">
+      <div class="footer__logo">
+        <a href="/" class="logo">
+          <img src="/img/wolfwarrior-white-logo.svg" alt="WolFWarrioR">
+        </a>
+      </div>
+      
       <p class="footer__copyright">&copy WolFWarrioR 2023</p>
-      <p class="footer__copyright">website design v0.3 BETA</p>
+      <p class="footer__copyright">website design v0.36 BETA</p>
       <p class="footer__copyright">pure html+css</p>
       <p class="footer__copyright">will be made with NuxtJS</p>
       <p class="footer__copyright footer__copyright--important-mes">Слава Україні!</p>

@@ -4,31 +4,21 @@
   --bg-color: #171717;
   --nav-bg: #14316e;
   --nav-color: #ffffff;
-  --navbar-background-color: rgba(229,235,244,.8);
+  /* --navbar-background-color: rgba(229,235,244,.8); */
+  --navbar-background-color: rgba(40, 45, 67, 0.8);
+  --navbar-background-blur: 20px;
   --navbar-background-color-no-blur: rgba(229,235,244,.95);
   --navbar-menu-background-color: #ebeff4;
   --navbar-button-color-primary: #f06414;
   --navbar-button-color-primary-hover: #f1742b;
   --navbar-button-color-secondary: #05a0fa;
   --navbar-button-color-secondary-hover: #1ea9fb;
-  --navbar-content-color-primary: #000;
+  --navbar-hover-background-color: hsla(0, 0%, 100%, 0.05);
+  --navbar-content-color-primary: #fff;
   --important-mes-background: linear-gradient(90deg, #0057b7, #ffd700 );
 }
 
 :host([theme="light"]) {
-  --navbar-content-color-primary: var(--color-darken-900);
-  --navbar-content-color-secondary: var(--color-darken-600);
-  --navbar-content-color-tertiary: var(--color-darken-500);
-  --navbar-background-color: rgba(229,235,244,.8);
-  --navbar-background-color-no-blur: rgba(229,235,244,.95);
-  --navbar-menu-background-color: #efefef;
-  --navbar-menu-background-color-alt: var(--color-darken-100);
-  --navbar-hover-background-color: var(--color-darken-100);
-  --navbar-hover-background-color-alt: var(--color-darken-300);
-  --navbar-blizzard-logo-background-color: var(--color-content-700);
-  --navbar-badge-text-color: var(--color-content-900);
-  --navbar-battletag-text-color: var(--color-primary-500);
-  --navbar-search-background-color: var(--color-content-900);
 }
 
 img, svg {
@@ -67,14 +57,15 @@ header{
   z-index: 99;
 }
 
-
 .nav {
   display: flex;
+  -webkit-backdrop-filter: blur(var(--navbar-background-blur));
+  backdrop-filter: blur(var(--navbar-background-blur));
   flex-direction: row;
   background-color: var(--navbar-background-color);
   position: absolute;
-  border-radius: 50px/50px;
-  /* height: 72px; */
+  border-radius: 8px;
+  padding: 0 12px 0 0;
   color: var(--navbar-content-color-primary);
   align-items: center;
   left: 16px;
@@ -84,6 +75,7 @@ header{
   flex-wrap: nowrap;
   align-content: space-between;
   justify-content: space-around;
+  height: 72px;
 }
 
 .nav__list {
@@ -91,10 +83,14 @@ header{
   flex: 1 1 auto;
   flex-direction: row;
   align-content: center;
-  align-items: center;
   justify-content: flex-start;
+  align-items: center;
   list-style: none;
   order: 0;
+}
+
+.nav__list--secondary{
+  justify-content: flex-end;
 }
 
 .nav__list--primary .nav__list__item .nav__list__item__link {
@@ -106,29 +102,30 @@ header{
   border-radius: 8px;
 }
 
+.nav__list--secondary .nav__list__item .nav__list__item__link {
+  padding: 0 16px;
+  line-height: 1.2;
+  min-height: 48px;
+  display: flex;
+  align-items: center;
+  border-radius: 8px;
+}
+
 .nav__list__item__link:hover{
-  background-color: red;
+  background-color: var(--navbar-hover-background-color);
 }
 
 .nav__logo {
-  height: 67px;
-  width: 67px;
-  padding-left: 5px;
+  display: flex;
+  height: 100%;
+  padding-left: 32px;
   padding-right: 16px;
-  padding: 2.5px 0;
-  border-top-left-radius: 50%;
-  border-bottom-left-radius: 50%;
+  align-items: center;
+  text-align: left;
 }
 
 .nav__logo__img {
-  border-top-left-radius: 50%;
-  border-bottom-left-radius: 50%;
-}
-
-.footer{
-  background-color: #171717;
-  color: white;
-  text-align: center;
+  height: 56px;
 }
 
 .nav__list__item__btn {
@@ -146,16 +143,10 @@ header{
   fill: var(--nav-btn-color);
 }
 
-.footer__copyright{}
-
-.footer__copyright--disclaimer{}
-.footer__copyright--trademarks{}
-.nav__list--primary{
-  font-size: 18px;
-}
 .nav__list--secondary .nav__list__item{
   font-size: 16px;
-  padding: 0 8px;
+  /* padding: 0 8px; */
+  
 }
 
 .nav__list--secondary .nav__list__item:has(.nav__list__item__btn),
@@ -163,9 +154,18 @@ header{
   margin: 0 2px !important;
   padding: 0;
 }
+
 .section{
   min-height: 25vh;
 }
+.section__backround{
+  max-height: 100%;
+  max-width: 100%;
+  object-fit: inherit;
+  position: absolute;
+  z-index: -111;
+}
+
 .section--main{
   height: 100vh;
   display: flex;
@@ -179,9 +179,6 @@ header{
   height: initial;
 }
 
-.footer__copyright--important-mes{
-  background: var(--important-mes-background);
-}
 .nav__list__item__btn--github{}
 .section--about{}
 .section--blog{}
@@ -254,4 +251,30 @@ header{
   max-width: 200px;
   height: 20vw;
   max-height: 200px;
+}
+
+
+.footer{
+  border-top: yellowgreen 1px solid;
+  color: white;
+  text-align: center;
+  padding-top: 24px;
+  padding-bottom: 25px;
+  min-height: 30vh;
+}
+
+.footer__logo{
+  height: 33px;
+  margin: 30px 0;
+}
+
+.footer__copyright{}
+
+.footer__copyright--disclaimer{}
+.footer__copyright--trademarks{}
+.nav__list--primary{
+  font-size: 18px;
+}
+.footer__copyright--important-mes{
+  background: var(--important-mes-background);
 }

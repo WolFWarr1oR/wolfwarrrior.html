@@ -13,7 +13,7 @@
   --navbar-button-color-primary-hover: #f1742b;
   --navbar-button-color-secondary: #05a0fa;
   --navbar-button-color-secondary-hover: #1ea9fb;
-  --navbar-hover-background-color: hsla(0, 0%, 100%, 0.05);
+  --navbar-hover-background-color: hsla(0, 0%, 100%, 0.15);
   --navbar-content-color-primary: #fff;
   --important-mes-background: linear-gradient(90deg, #0057b7, #ffd700 );
 }
@@ -33,7 +33,7 @@ img, svg {
   color: inherit;
   /* color: red !important  ; */
   font-family: sans-serif;
-  /* border: #ffffff 1px solid !important; */
+  /* border: #ffffff .1px solid !important; */
 }
 
 body {
@@ -118,8 +118,8 @@ header{
 .nav__logo {
   display: flex;
   height: 100%;
-  padding-left: 32px;
-  padding-right: 16px;
+  margin-left: 16px;
+  margin-right: 16px;
   align-items: center;
   text-align: left;
 }
@@ -184,6 +184,17 @@ header{
 .section--blog{}
 .section--pref1{}
 .section--projects{}
+
+.section--projects .section__card{
+  background: radial-gradient(124.81% 124.81% at 50% -.29%,#242a42 43.75%,#121524 100%);
+  border-radius: 4px;
+  overflow: visible;
+  position: relative;
+  justify-content: space-between;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
 
 .section__pref__elem{
   display: flex;
@@ -259,7 +270,7 @@ header{
   color: white;
   text-align: center;
   padding-top: 24px;
-  padding-bottom: 25px;
+  padding-bottom: 10px;
   min-height: 30vh;
 }
 
